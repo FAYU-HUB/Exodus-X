@@ -12,5 +12,6 @@ cd exodus-x
 ​chmod +x setup.sh
 
 ​./setup.sh
+
 ​Cara Menjalankan
 ​Cukup ketik exodus di mana saja di terminal Termux kamu.
