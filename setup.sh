@@ -4,8 +4,8 @@ echo "Menyiapkan Exodus-X Client..."
 pkg update && pkg upgrade -y
 pkg install nodejs -y
 
-# Install dependensi node
-npm install mineflayer mineflayer-autoeat mineflayer-armor-manager vec3
+# Install SEMUA dependensi yang ada di package.json
+npm install mineflayer mineflayer-autoeat mineflayer-armor-manager mineflayer-pathfinder mineflayer-viewer vec3
 
 # Membuat perintah global di Termux
 echo "Mendaftarkan perintah 'exodus'..."
@@ -18,4 +18,5 @@ echo " INSTALASI SELESAI! "
 echo " Sekarang kamu bisa mengetik 'exodus' "
 echo " dari mana saja di Termux. "
 echo "=========================================="
+
 
