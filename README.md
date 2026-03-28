@@ -5,7 +5,7 @@ Saya tidak bertanggung jawab atas akun yang di-ban karena menggunakan client ini
 # Exodus-X Client (Termux Edition)
 ​Minecraft Utility Client berbasis Node.js untuk Anarchy/Utility.
 ​Cara Instalasi di Termux
-​git clone https://github.com/username/exodus-x
+​git clone https://github.com/FAYU-HUB/Exodus-X/
 ​cd exodus-x
 ​chmod +x setup.sh
 ​./setup.sh
