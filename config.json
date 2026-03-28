@@ -1,0 +1,16 @@
+{
+  "host": "anarchy.server.com",
+  "port": 25565,
+  "auth": "microsoft",
+  "version": false,
+  "prefix": "!",
+  "reconnect": true,
+  "features": {
+    "killAura": true,
+    "antiKb": true,
+    "autoEat": true,
+    "autoArmor": true,
+    "scaffold": false
+  }
+}
+
