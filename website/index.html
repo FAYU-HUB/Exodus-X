@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exodus-X Web</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background: #0b0f1a; color: #fff; }
+        .glass { background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); }
+        .btn-active { background: #3b82f6; box-shadow: 0 0 15px #3b82f6; border-color: #60a5fa; }
+    </style>
+</head>
+<body class="p-4">
+    <div class="max-w-6xl mx-auto grid grid-cols-12 gap-6">
+        
+        <div class="col-span-12 glass p-6 rounded-2xl flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-blue-400">EXODUS-X <span class="text-white">WEB</span></h1>
+            <div id="statusBadge" class="px-4 py-1 rounded-full bg-red-500/20 text-red-400 text-xs border border-red-500/50">TERPUTUS</div>
+        </div>
+
+        <div class="col-span-12 md:col-span-4 space-y-4">
+            <div class="glass p-6 rounded-2xl">
+                <input id="host" type="text" placeholder="IP Server" class="w-full bg-black/40 border border-white/10 p-2 rounded mb-2 text-sm outline-none">
+                <input id="port" type="number" value="25565" class="w-full bg-black/40 border border-white/10 p-2 rounded mb-4 text-sm outline-none">
+                <button onclick="startBot()" class="w-full bg-blue-600 p-2 rounded font-bold">KONEK</button>
+            </div>
+
+            <div class="glass p-6 rounded-2xl space-y-2">
+                <button id="kaBtn" onclick="toggleFeature('killAura', this)" class="w-full flex justify-between p-3 rounded bg-white/5 border border-transparent">
+                    <span>Kill Aura</span><i class="fas fa-bolt"></i>
+                </button>
+                <button id="kbBtn" onclick="toggleFeature('antiKb', this)" class="w-full flex justify-between p-3 rounded bg-white/5 border border-transparent">
+                    <span>Anti-KB</span><i class="fas fa-shield-halved"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="col-span-12 md:col-span-8 space-y-4">
+            <div class="grid grid-cols-3 gap-4">
+                <div class="glass p-4 rounded-xl text-center"><p id="hpLabel" class="text-xl font-bold text-red-500">--</p><p class="text-xs">DARAH</p></div>
+                <div class="glass p-4 rounded-xl text-center"><p id="foodLabel" class="text-xl font-bold text-orange-500">--</p><p class="text-xs">MAKAN</p></div>
+                <div class="glass p-4 rounded-xl text-center"><p id="posLabel" class="text-xs mt-2 text-blue-400">--</p><p class="text-xs">POSISI</p></div>
+            </div>
+
+            <div class="glass rounded-2xl h-80 flex flex-col">
+                <div id="logBox" class="flex-1 p-4 overflow-y-auto text-xs font-mono space-y-1"></div>
+                <div class="p-2 flex gap-2">
+                    <input id="cmdInput" type="text" placeholder="Kirim pesan..." class="flex-1 bg-black/40 border border-white/10 p-2 rounded text-sm outline-none">
+                    <button onclick="sendChat()" class="bg-blue-600 px-4 rounded"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
